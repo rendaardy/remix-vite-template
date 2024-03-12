@@ -1,0 +1,38 @@
+{
+	"$schema": "http://json.schemastore.org/tsconfig",
+	"compilerOptions": {
+		// Cache settings
+		"incremental": true,
+		"tsBuildInfoFile": "./node_modules/.cache/.tsbuildinfo",
+
+		// Enable latest features
+		"lib": ["ESNext", "DOM", "DOM.Iterable"],
+		"target": "ESNext",
+		"module": "Preserve",
+		"moduleDetection": "force",
+		"jsx": "react-jsx",
+		"allowJs": true,
+		"experimentalDecorators": false,
+		"useDefineForClassFields": true,
+		"resolvePackageJsonExports": true,
+		"resolvePackageJsonImports": true,
+
+		// Bundler mode
+		"moduleResolution": "Bundler",
+		"allowImportingTsExtensions": true,
+		"verbatimModuleSyntax": true,
+		"noEmit": true,
+
+		// Best practices
+		"strict": true,
+		"skipLibCheck": true,
+		"noFallthroughCasesInSwitch": true,
+
+		// Some stricter flags (disabled by default)
+		"noUnusedLocals": false,
+		"noUnusedParameters": false,
+		"noPropertyAccessFromIndexSignature": false
+	},
+	"exclude": ["build", "node_modules"],
+	"include": ["env.d.ts", "**/*.ts", "**/*.tsx"]
+}
